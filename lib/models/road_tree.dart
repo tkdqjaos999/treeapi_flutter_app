@@ -10,15 +10,17 @@ class RoadTree {
   double ObjectId;
   @JsonKey(name: 'WDPT_NM')
   String WDPTName;
-  @JsonKey(name: 'X')
-  String x;
-  @JsonKey(name: 'Y')
-  String y;
+  @JsonKey(name: 'LAT')
+  String lat;
+  @JsonKey(name: 'LNG')
+  String lng;
 
-  RoadTree({this.GUName, this.ObjectId, this.WDPTName, this.x, this.y});
+  RoadTree({this.GUName, this.ObjectId, this.WDPTName, this.lat, this.lng});
 
   factory RoadTree.fromJson(Map<String, dynamic> json) => _$RoadTreeFromJson(json);
 
   Map<String, dynamic> toJson() => _$RoadTreeToJson(this);
 
 }
+
+List<RoadTree> treeList = [];
